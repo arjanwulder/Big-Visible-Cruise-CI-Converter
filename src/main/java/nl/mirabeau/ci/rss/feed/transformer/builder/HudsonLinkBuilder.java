@@ -9,11 +9,9 @@ public class HudsonLinkBuilder implements LinkBuilder {
     @Value("${nl.mirabeau.hudson.base.url}")
     private String url;
 
-    private static final String STATIC_URL = "http://trans-build1.mirabeau.nl:8080";
-
     @Override
     public String buildUrl(String view) {
-        StringBuilder linkStringBuilder = new StringBuilder(STATIC_URL);
+        StringBuilder linkStringBuilder = new StringBuilder(url);
         linkStringBuilder.append("/view/").append(view).append("/rssLatest");
         return linkStringBuilder.toString();
     }

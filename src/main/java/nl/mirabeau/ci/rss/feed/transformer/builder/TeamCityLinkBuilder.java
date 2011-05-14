@@ -9,11 +9,9 @@ public class TeamCityLinkBuilder implements LinkBuilder {
     @Value("${nl.mirabeau.teamcity.base.url}")
     private String url;
 
-    private static final String STATIC_URL = "http://trans-build1.mirabeau.nl:9090";
-
     @Override
     public String buildUrl(String view) {
-        StringBuilder linkStringBuilder = new StringBuilder(STATIC_URL);
+        StringBuilder linkStringBuilder = new StringBuilder(url);
         linkStringBuilder.append("/feed.html?itemsType=").append(view).append("&buildStatus=successful&buildStatus=failed");
         return linkStringBuilder.toString();
     }
