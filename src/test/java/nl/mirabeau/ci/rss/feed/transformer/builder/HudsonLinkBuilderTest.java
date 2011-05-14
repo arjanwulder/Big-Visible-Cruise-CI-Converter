@@ -19,7 +19,6 @@ public class HudsonLinkBuilderTest {
 
         // Arrange
         Assert.assertNotNull(result);
-        //Assert.assertEquals("http://www.feedurl.com/view/Monitoring/rssLatest", result);
-        Assert.assertEquals("http://trans-build1.mirabeau.nl:8080/view/Monitoring/rssLatest", result);
+        Assert.assertEquals("http://www.feedurl.com/view/Monitoring/rssLatest", result);
     }
 }

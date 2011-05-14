@@ -19,9 +19,7 @@ public class TeamCityLinkBuilderTest {
 
         // Arrange
         Assert.assertNotNull(result);
-//        Assert.assertEquals("http://www.feedurl.com/feed.html?itemsType=builds&buildStatus=successful&buildStatus=failed",
-//                result);
-        Assert.assertEquals("http://trans-build1.mirabeau.nl:9090/feed.html?itemsType=builds&buildStatus=successful&buildStatus=failed",
+        Assert.assertEquals("http://www.feedurl.com/feed.html?itemsType=builds&buildStatus=successful&buildStatus=failed",
                 result);
     }
 }
